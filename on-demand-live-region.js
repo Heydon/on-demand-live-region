@@ -24,7 +24,6 @@
 
     // Cast parent as DOM node
     this.settings.parent = document.querySelector(this.settings.parent)
-
   }
 
   // 'Say' method
@@ -36,7 +35,7 @@
     }
 
     // Did an override level get set?
-    var delay = delay|| this.settings.delay
+    delay = delay || this.settings.delay
 
     // Create fresh live region
     this.currentRegion = document.createElement('span')
