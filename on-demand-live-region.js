@@ -29,7 +29,7 @@
   // 'Say' method
   OnDemandLiveRegion.prototype.say = function (thingToSay, delay) {
     // Get rid of old live region if it exists
-    var oldRegion = this.settings.parent.querySelector('[id^="live-region-"]') || false
+    var oldRegion = this.settings.parent.querySelector('[id^="' + this.settings.idPrefix + '"]') || false
     if (oldRegion) {
       this.settings.parent.removeChild(oldRegion)
     }
