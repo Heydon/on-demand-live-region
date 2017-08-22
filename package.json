@@ -1,0 +1,31 @@
+{
+  "name": "on-demand-live-region",
+  "version": "0.0.1",
+  "description": "A module for editing content inline using an accessible contenteditable implementation",
+  "main": "on-demand-live-region.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard ./on-demand-live-region.js",
+    "uglify": "uglifyjs on-demand-live-region.js -o on-demand-live-region.min.js",
+    "extract-version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
+    "add-version": "echo \"/*! on-demand-live-region $(npm run extract-version --silent) — © Heydon Pickering */\n$(cat on-demand-live-region.min.js)\" > on-demand-live-region.min.js",
+    "build": "npm run uglify && npm run add-version",
+    "precommit": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heydon/on-demand-live-region.git"
+  },
+  "keywords": [],
+  "author": "Heydon Pickering",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Heydon/on-demand-live-region/issues"
+  },
+  "homepage": "https://github.com/Heydon/on-demand-live-region#readme",
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "standard": "^10.0.2",
+    "uglify-js": "^2.8.22"
+  }
+}

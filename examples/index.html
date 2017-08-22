@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+    /* basic page styles */
+    html {
+      font-size: 125%;
+      font-family: sans-serif;
+      padding: 1em;
+    }
+
+    * {
+      font-size: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    * + * {
+      margin-top: 1em;
+    }
+
+    /* custom theming */
+    button {
+      border: 0;
+      padding: 0.25rem 1rem;
+      background: black;
+      color: white;
+      margin-top: 0.5rem;
+    }
+
+    button:focus {
+      outline: 4px solid blue;
+    }
+    </style>
+    <title>
+      Inclusive Menu Button | Basic Example
+    </title>
+  </head>
+  <body>
+    <p>Each time you click this button it should announce "Hello World":</p>
+    <button id="hello">Test 1</button>
+    <p>Each time you click this button it should announce "Goodbye World" after a 1 second delay:</p>
+    <button id="bye">Test 2</button>
+    <script src="../on-demand-live-region.js"></script>
+    <script>
+      // Instantiation
+      var eg1 = new OnDemandLiveRegion()
+
+      // Announce on click
+      document.getElementById('hello').addEventListener('click', function () {
+        eg1.say('Hello World!', 'assertive')
+      })
+
+      var eg2 = new OnDemandLiveRegion({delay: 1000})
+
+      // Announce on click
+      document.getElementById('bye').addEventListener('click', function () {
+        eg2.say('GoodBye World!')
+      })
+    </script>
+  </body>
+</html>
