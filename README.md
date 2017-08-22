@@ -8,6 +8,14 @@ const liveRegion = new OnDemandLiveRegion()
 liveRegion.say('Hello World!')
 ```
 
+## Installation
+
+Just grab the [minified version](on-demand-live-region.min.js) or install from NPM:
+
+```
+npm i on-demand-live-region
+```
+
 ## Settings object
 
 * `level` — the live region level (default: `polite`)
@@ -34,4 +42,4 @@ liveRegionDelayed.say('Hello World! (sorry, delayed reaction)', 1000)
 
 ## Say it over and over
 
-Because each time you use the `say` method any previous live region is replaced, you can reliably make the same announcement multiple times. This is not guaranteed in other implementations, where the same live region is repopulated.
+Each time you use the `say` method, the extant live region (if it exists) is destroyed and a new one created. This means you can reliably make the same announcement multiple times. This is not guaranteed in other implementations, where a persistent live region is repopulated.
