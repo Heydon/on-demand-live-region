@@ -19,7 +19,7 @@ npm i on-demand-live-region
 ## Settings object
 
 * `level` — the live region level (default: `polite`)
-* `parent` — the element to which the live region will be append (default: `body`)
+* `parent` — the element to which the live region will be appended (default: `body`)
 * `idPrefix` — the prefix for the unique `id` generated for the live region (default: `live-region-`)
 * `delay` — the delay in milliseconds before the phrase is announced (default: `0`)
 
