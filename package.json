@@ -1,6 +1,6 @@
 {
   "name": "on-demand-live-region",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A module for editing content inline using an accessible contenteditable implementation",
   "main": "on-demand-live-region.js",
   "scripts": {

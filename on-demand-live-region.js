@@ -12,7 +12,7 @@
       level: 'polite',
       parent: 'body',
       idPrefix: 'live-region-',
-      delay: 0
+      delay: 10
     }
 
     // Overwrite defaults where they are provided in options
@@ -40,7 +40,13 @@
     // Create fresh live region
     this.currentRegion = document.createElement('span')
     this.currentRegion.id = this.settings.idPrefix + Math.floor(Math.random() * 10000)
+
+    // Determine redundant role
+    var role = this.settings.level !== 'assertive' ? 'status' : 'alert'
+
+    // Add role and aria-live attribution
     this.currentRegion.setAttribute('aria-live', this.settings.level)
+    this.currentRegion.setAttribute('role', role)
 
     // Hide live region element, but not from assistive technologies
     this.currentRegion.setAttribute('style', 'clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px')

@@ -43,3 +43,12 @@ liveRegionDelayed.say('Hello World! (sorry, delayed reaction)', 1000)
 ## Say it over and over
 
 Each time you use the `say` method, the extant live region (if it exists) is destroyed and a new one created. This means you can reliably make the same announcement multiple times. This is not guaranteed in other implementations, where a persistent live region is repopulated.
+
+## Tested in
+
+* Safari with VoiceOver
+* Chrome with VoiceOver
+* IE11 with JAWS
+* Chrome with JAWS
+* Firefox with NVDA
+* Chrome with ChromeVox
