@@ -12,7 +12,7 @@
       level: 'polite',
       parent: 'body',
       idPrefix: 'live-region-',
-      delay: 10
+      delay: 0
     }
 
     // Overwrite defaults where they are provided in options
