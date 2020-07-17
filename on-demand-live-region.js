@@ -49,7 +49,7 @@
     this.currentRegion.setAttribute('role', role)
 
     // Hide live region element, but not from assistive technologies
-    this.currentRegion.setAttribute('style', 'clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px')
+    this.currentRegion.setAttribute('style', 'clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute; top: 0; left: 0; white-space: nowrap; width: 1px')
 
     // Add live region to its designated parent
     this.settings.parent.appendChild(this.currentRegion)
